@@ -5,7 +5,7 @@ window.PRICES = {
       {
         "r": 13,
         "tire": "175/70",
-        "price": 1699
+        "price": 1666
       },
       {
         "r": 14,
