@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Цены — администратор</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+  <script src="data.js" defer></script>
+  <script src="prices.js" defer></script>
+  <script src="admin.js" defer></script>
+</head>
+<body>
+
+  <header class="top">
+    <a class="top__logo" href="./" target="_blank" rel="noopener"><img id="logo" src="" alt=""></a>
+    <button class="link" id="logout" type="button" hidden>Выйти</button>
+  </header>
+
+  <!-- Вход: один раз вставить ключ доступа, дальше браузер его помнит -->
+  <section class="login" id="login" hidden>
+    <h1>Вход для администратора</h1>
+    <p>Вставьте ключ доступа. Браузер запомнит его, и в следующий раз вводить не придётся.</p>
+    <form id="login-form">
+      <label class="field">
+        <span>Ключ доступа</span>
+        <input id="token" type="password" autocomplete="off" spellcheck="false" required>
+      </label>
+      <button class="btn" type="submit">Войти</button>
+      <p class="msg" id="login-msg" role="alert"></p>
+    </form>
+  </section>
+
+  <main class="editor" id="editor" hidden>
+    <section class="block">
+      <h2>Шиномонтаж</h2>
+      <p class="hint">Цена комплекса на четыре колеса. Радиусы, которых нет в списке, на сайте станут неактивными.</p>
+      <div class="tabs" id="types" role="tablist"></div>
+      <div class="table" id="rows"></div>
+      <button class="add" id="add-row" type="button">+ Добавить радиус</button>
+    </section>
+
+    <section class="block">
+      <h2>Услуги</h2>
+      <p class="hint">Цену пишите как на сайте, например «от 300 ₽».</p>
+      <ol class="services" id="services"></ol>
+      <button class="add" id="add-service" type="button">+ Добавить услугу</button>
+    </section>
+  </main>
+
+  <footer class="save" id="save-bar" hidden>
+    <p class="msg" id="save-msg" role="status"></p>
+    <button class="btn" id="save" type="button">Сохранить</button>
+  </footer>
+
+</body>
+</html>

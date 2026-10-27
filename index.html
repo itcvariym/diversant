@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Шиномонтаж</title>
+  <meta name="description" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400&family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <section class="hero" id="top">
+    <div class="hero__media">
+      <video id="hero-video" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+      <div class="hero__veil hero__veil--top"></div>
+      <div class="hero__veil"></div>
+    </div>
+    <div class="hero__content">
+      <header class="bar">
+        <a class="bar__logo rise d-logo" id="logo" href="#top"></a>
+        <nav class="bar__nav rise d-nav" aria-label="Разделы">
+          <a href="#price">Цены</a>
+          <a href="#services">Услуги</a>
+          <a href="#contacts">Контакты</a>
+          <a class="bar__call" id="nav-call" href="#contacts">Позвонить</a>
+        </nav>
+      </header>
+      <div class="hero__text">
+        <h1 class="rise d-h1" id="hero-title"></h1>
+        <p class="hero__lead rise d-lead" id="hero-lead"></p>
+        <div class="cta rise d-cta" id="hero-cta"></div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="stage reveal" id="price">
+      <div class="stage__head">
+        <h2 class="rise" id="calc-title"></h2>
+        <div class="tabs rise" id="calc-types" aria-label="Тип автомобиля"></div>
+      </div>
+      <div class="stage__scene rise">
+        <span class="stage__big stage__big--r" id="big-r" aria-hidden="true"></span>
+        <div class="stage__object">
+          <div class="wheel" id="wheel">
+            <div class="wheel__tire"></div>
+            <svg class="wheel__text" viewBox="0 0 600 600" aria-hidden="true">
+              <defs><path id="sidewall" d="M300,300 m-276,0 a276,276 0 1,1 552,0 a276,276 0 1,1 -552,0"/></defs>
+              <text><textPath href="#sidewall" startOffset="25%" text-anchor="middle" class="js-tire"></textPath></text>
+              <text><textPath href="#sidewall" startOffset="75%" text-anchor="middle" class="js-tire"></textPath></text>
+            </svg>
+            <div class="wheel__rim" id="rim"><img id="rim-img" src="" alt="Диск"></div>
+          </div>
+          <span class="stage__shadow" aria-hidden="true"></span>
+        </div>
+        <span class="stage__big stage__big--p" id="big-p" aria-hidden="true"></span>
+      </div>
+      <div class="radii rise" id="calc-radii" aria-label="Радиус колеса"></div>
+      <div class="stage__info rise">
+        <dl class="specs" aria-live="polite">
+          <div><dt>Тип</dt><dd id="spec-type"></dd></div>
+          <div><dt>Шина</dt><dd id="spec-r"></dd></div>
+          <div><dt>Цена</dt><dd id="spec-p"></dd></div>
+        </dl>
+        <p class="stage__service" id="calc-service"></p>
+        <div class="cta" id="calc-cta"></div>
+      </div>
+    </section>
+
+    <section class="gallery reveal" id="gallery">
+      <h2 class="rise" id="gallery-title"></h2>
+      <div class="gallery__track" id="gallery-track"></div>
+    </section>
+
+    <section class="services reveal" id="services">
+      <h2 class="rise" id="services-title"></h2>
+      <ol class="services__list" id="services-list"></ol>
+    </section>
+
+    <section class="contacts reveal" id="contacts">
+      <div class="contacts__text">
+        <h2 class="rise" id="contacts-title"></h2>
+        <dl class="contacts__info rise">
+          <div><dt>Адрес</dt><dd id="contacts-address"></dd></div>
+          <div><dt>Часы</dt><dd id="contacts-hours"></dd></div>
+        </dl>
+        <a class="contacts__phone rise" id="contacts-phone" href="#"></a>
+        <div class="cta rise" id="contacts-cta"></div>
+      </div>
+      <div class="contacts__photo">
+        <img id="contacts-img" src="" alt="" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span id="foot-name"></span>
+    <span id="foot-year"></span>
+  </footer>
+
+</body>
+</html>
